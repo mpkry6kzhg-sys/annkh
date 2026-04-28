@@ -1,0 +1,41 @@
+@import url('https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;0,700;1,300;1,400&family=Montserrat:wght@300;400;500;600&display=swap');
+@import "tailwindcss";
+
+@theme {
+  --font-serif: "Cormorant Garamond", serif;
+  --font-sans: "Montserrat", sans-serif;
+  
+  --color-brand-cream: #f5f2ed;
+  --color-brand-rust: #d2542a;
+  --color-brand-gold: #c5a059;
+  --color-brand-dark: #1a1a1a;
+}
+
+@layer base {
+  body {
+    @apply font-sans bg-brand-cream text-brand-dark antialiased;
+  }
+  
+  h1, h2, h3, h4, .serif {
+    @apply font-serif;
+  }
+}
+
+/* Custom Zig-Zag Border from Ref */
+.zigzag-border {
+  background-image: linear-gradient(135deg, transparent 50%, #1a1a1a 50%), linear-gradient(225deg, transparent 50%, #1a1a1a 50%);
+  background-position: top center;
+  background-repeat: repeat-x;
+  background-size: 20px 20px;
+  height: 10px;
+  width: 100%;
+}
+
+.zigzag-border-bottom {
+  background-image: linear-gradient(315deg, transparent 50%, #1a1a1a 50%), linear-gradient(45deg, transparent 50%, #1a1a1a 50%);
+  background-position: bottom center;
+  background-repeat: repeat-x;
+  background-size: 20px 20px;
+  height: 10px;
+  width: 100%;
+}
